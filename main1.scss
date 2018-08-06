@@ -1,0 +1,79 @@
+@import "mixins";
+@import "var";
+@import url('https://fonts.googleapis.com/css?family=Changa|Dancing+Script|Do+Hyeon|Doppio+One|Pacifico|Tajawal');
+
+footer {
+  color: #b9b9b8;
+
+  .widgettitle {
+    color: #f8f9fa;
+    background: #0f0f0f;
+    padding: 9px;
+    width: 100%;
+    /* text-align: center; */
+    border-bottom: #fff 2px solid;
+  }
+  h2{
+    a{
+      font-size: 14px;
+    }
+  }
+  a{
+    color: #ffffff;
+    &:hover{
+      color: #dddddd;
+      text-decoration: none;
+
+    }
+
+  }
+  ul{
+    display: table-header-group;
+    li{
+      display: block;
+      text-align: right;
+      direction: rtl;
+      i {
+        display: inline-block;
+
+      }
+    }
+  }
+  .posts{
+    .thumbs {
+      width: 56px;
+      height: 56px;
+      padding: 3px;
+      background: #eee;
+      float: left;
+      margin-right: 10px;
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      border-radius: 100%;
+      overflow: hidden;
+      position: relative;
+      &:hover {
+        background: #eee;
+        padding: 0;
+        -webkit-animation: pulse ease-in-out 1 normal 500ms;
+        -moz-animation: pulse ease-in-out 1 normal 500ms;
+        -ms-animation: pulse ease-in-out 1 normal 500ms;
+        -o-animation: pulse ease-in-out 1 normal 500ms;
+        animation: pulse ease-in-out 1 normal 500ms;
+        border: 3px solid #aaa;
+      }
+
+
+
+
+
+      img {
+        -webkit-transition: all 0.5s;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+        display: block;
+      }
+    }
+  }
+}

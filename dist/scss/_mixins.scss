@@ -1,0 +1,14 @@
+@mixin transition($p){
+    transition: $p;
+    -moz-transition: $p;
+    -o-transition: $p;
+    -webkit-transition: $p;
+}
+
+@mixin filterBlur($f){
+    -webkit-filter: blur($f);
+    -moz-filter: blur($f);
+    -o-filter: blur($f);
+    -ms-filter: blur($f);
+    filter: blur($f);
+}

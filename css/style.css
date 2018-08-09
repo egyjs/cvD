@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css?family=Changa|Dancing+Script|Do+Hyeon|Doppio+One|Pacifico|Tajawal");
+body {
+  background: #eee;
+  color: #585858;
+  font-family: "Cabin", sans-serif;
+}
+
+#fun-facts {
+  text-align: center;
+  padding: 15px 0 15px 0;
+}
+#fun-facts #item {
+  z-index: 50;
+  color: white;
+  margin: 0 auto;
+  padding: 10px 0 5px 0;
+}
+#fun-facts #item i {
+  font-size: 44px;
+  padding: 5px;
+  border-radius: 100%;
+  background: rgba(0, 123, 255, 0.78);
+  transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+}
+#fun-facts #item h3 {
+  margin-top: 12px;
+  font-family: "Do Hyeon";
+  font-size: 25px;
+}
+#fun-facts #item span {
+  width: 100%;
+}
+#fun-facts #item span:before, #fun-facts #item span::after {
+  content: "";
+  top: -4px;
+  bottom: 0;
+  width: 2px;
+  height: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: #fff;
+}
+#fun-facts #item span::after {
+  left: 0;
+}
+#fun-facts #item span:before {
+  right: 0;
+}
+#fun-facts #item::before, #fun-facts #item::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  transition: all 0.3s linear;
+  background: #fff;
+}
+#fun-facts #item::before {
+  top: -6px;
+}
+#fun-facts #item:hover i {
+  color: rgba(0, 123, 255, 0.78);
+  background: white;
+}
+#fun-facts #item:hover::before, #fun-facts #item:hover::after {
+  width: 100%;
+}
+#fun-facts #item:hover span:before, #fun-facts #item:hover span::after {
+  height: 100%;
+}
+#fun-facts::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #333;
+  opacity: 0.8;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#projects .title {
+  margin: 0 auto;
+}
+#projects .title span {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  font-size: 25px;
+}
+#projects .title span i {
+  border: 1.5px solid #468bb9;
+  padding: 5px;
+  border-radius: 100%;
+  color: #468bb9;
+}
+#projects .title span::before, #projects .title span::after {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 5px;
+  top: -5px;
+  position: relative;
+  background: rgba(0, 123, 255, 0.78);
+}
+#projects .title span::after {
+  right: 0;
+}
+#projects .row {
+  display: flex;
+  justify-content: center;
+}
+#projects .row #project {
+  width: 350px !important;
+  padding: 0;
+  overflow: hidden;
+}
+#projects .row #project .header {
+  overflow: hidden;
+  position: relative;
+}
+#projects .row #project .header .front {
+  width: 100%;
+  transform: rotate(0deg);
+}
+#projects .row #project .header .front img {
+  margin: 0 auto;
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+#projects .row #project .header .front .desc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+#projects .row #project .header .front .desc p {
+  margin: 0;
+  color: #fff;
+  padding: 5px;
+  background: rgba(0, 123, 255, 0.78);
+}
+#projects .row #project .header .front .desc .lang {
+  float: right;
+}
+#projects .row #project .header .front .desc .date {
+  float: left;
+}
+#projects .row #project .header .front, #projects .row #project .header .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity, display;
+}
+#projects .row #project .header .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  z-index: 2;
+  height: 100%;
+  text-align: center;
+  transform: translateY(-220px);
+  background: rgba(0, 0, 0, 0.83);
+  overflow: hidden;
+}
+#projects .row #project .header .back p {
+  padding: 45px 5px 30px 5px;
+}
+#projects .row #project .header:hover .back {
+  transform: translateY(0px);
+}
+#projects .row #project .card-body {
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+#projects .row #project .card-body .link {
+  float: left;
+  display: block;
+  word-wrap: break-word;
+}
+#projects .row #project .card-body .link a {
+  font-size: 24px;
+  font-family: "Do Hyeon";
+}
+#projects .row #project .card-body .link a:hover {
+  text-decoration: none;
+}
+#projects .row #project .card-body .share {
+  padding-top: 6px;
+  float: right;
+  padding-bottom: 2px;
+}
+#projects .row #project .card-body .share a {
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 100%;
+  color: white;
+  text-align: center;
+  padding: 2px;
+  height: 25px;
+  width: 25px;
+}
+#projects .row #project .card-body .share a i {
+  position: relative;
+  bottom: 2px;
+  margin: 0 auto;
+}
+
+.face {
+  background: #4267b2;
+}
+
+.gplus {
+  background: #d54538;
+}
+
+.twit {
+  background: #2aa9e0;
+}
+
+.F-cabin {
+  font-family: "Do Hyeon";
+}
+
+.F-Palanquin {
+  font-family: "Doppio One";
+}
+
+#title {
+  padding: 3px;
+  width: 100%;
+  text-align: center;
+}
+#title #icon-f {
+  display: block;
+  width: 200px;
+  font-size: 25px;
+  color: #fff;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+#title #icon-f::before {
+  content: "";
+  width: 80px;
+  height: 6px;
+  background-color: #468bb9;
+  display: block;
+  position: relative;
+  right: 0;
+  float: left;
+  top: 10px;
+}
+#title #icon-f::after {
+  content: "";
+  width: 80px;
+  height: 6px;
+  background-color: #468bb9;
+  display: block;
+  position: relative;
+  right: 15;
+  float: right;
+  top: 10px;
+}
+
+.colorAfterScroll {
+  background: #333333;
+}
+
+.color {
+  background: #eee;
+  background-attachment: fixed;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+.section {
+  position: relative;
+  padding: 3em 10%;
+}
+
+.section h2 {
+  text-align: center;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.49);
+  margin-bottom: 100px;
+  line-height: 67px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+
+.wrapper, body {
+  position: relative;
+}
+
+.navbar {
+  height: 54px;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+}
+.navbar #search-nav {
+  color: #fff;
+}
+.navbar #search-nav input::placeholder {
+  color: white;
+}
+.navbar #search-nav button {
+  color: white;
+  background: #468bb9;
+}
+
+.bgimage {
+  width: 100%;
+  position: relative;
+  background-image: url(../imgs/pattern-slider.png) !important;
+  background-position: center center;
+  background: #2980b9;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.bgimage h5 {
+  color: white;
+  text-shadow: 2px 2px #333;
+}
+
+.arrow-shape-blue {
+  border-color: #28324E transparent transparent;
+  bottom: -100px;
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.arrow-shape-blue, .arrow-shape-white {
+  -ms-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  display: block;
+  width: 0;
+  border-width: 100px 300px 0;
+  position: absolute;
+  left: 50%;
+  border-style: solid;
+  z-index: 1;
+}
+
+.card-icon {
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  background: #696969;
+  border-radius: 100px;
+  color: #f3f3f3;
+  text-align: center;
+}
+
+.card-icon i {
+  height: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background: #ffe200;
+            top: 0;
+            right: 0;
+            width: 100%;
+
+        }
+        .main{
+            display: -ms-flexbox;
+            align-items: center;
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            background-repeat: no-repeat;
+            border-top: 0;
+            position: relative;
+            text-align: center;
+            justify-content: center;
+            margin-top: 200px;
+
+        }
+        .c1{
+            animation: c1 1s infinite;
+            animation-direction: alternate;
+            background: #fff;
+            width: 150px;
+            height: 150px;
+            position: absolute;
+            border-radius: 100%;
+        }
+        .c2{
+            animation: c2 2s infinite;
+            background: #fee13c;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            border-radius: 100%;
+        }
+        img{
+            z-index: 50000;
+            width: 150px;
+            margin: 0 auto;
+        }
+        @keyframes c1 {
+            0%{
+                width: 0px;
+                height:5px;
+            }
+            100%{
+                width: 100em;
+                height: 100em;
+            }
+        }
+        @keyframes c2 {
+            0%{
+                width: 0px;
+                height:5px;
+            }
+            25%{
+                width: 0px;
+                height:5px;
+            }
+            75%{
+                width: 100em;
+                height:100em;
+            }
+            100%{
+                width: 0em;
+                height: 0em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="loader">
+    <div class="main">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <img src="https://image.flaticon.com/icons/svg/171/171239.svg">
+    </div>
+</div>
+</body>
+</html>

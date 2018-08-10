@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     $(".bgimage").height(($(window).height()));
-    $(".bgimage .row").css("marginTop",($(window).height()-$(".bgimage .row").height())/2);
+    $(".bgimage #sliders").css("marginTop",($(window).height()-$(".bgimage .row").height())/2);
     if($(window).width() < 767){
         $(".navbar").addClass("colorAfterScroll");
     }else {

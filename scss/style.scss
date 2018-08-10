@@ -2,7 +2,6 @@
 @import "mixins";
 @import url('https://fonts.googleapis.com/css?family=Changa|Dancing+Script|Do+Hyeon|Doppio+One|Pacifico|Tajawal');
 body {
-    background: #eee;
     color: #585858;
     font-family: 'Cabin', sans-serif;
 }
@@ -11,7 +10,7 @@ body {
 #fun-facts{
     text-align: center;
     padding: 15px 0 15px 0;
-    #item{
+    .item{
         z-index: 50;
         color: white;
         margin: 0 auto;
@@ -87,40 +86,9 @@ body {
 }
 
 #projects{
-    .title{
-        margin: 0 auto;
-        span{
-            margin-top:10px ;
-            display: block;
-            text-align: center;
-            font-size: 25px;
-            i{
-                border:1.5px solid  $maincolor;
-                padding: 5px;
-                border-radius: 100%;
-                color: $maincolor;
-            }
-            &::before, &::after{
-                content: "";
-                display: inline-block;
-                width: 80px;
-                height: 5px;
-                top: -5px;
-                position: relative;
-                background: $sccolor;
-            }
-            &::after{
-    right: 0;
-            }
-        }
-    }
     .row{
-      display: flex;
-      justify-content: center;
-      #project{
-        width: 350px !important;
-        padding: 0;
-        overflow: hidden;
+      .project{
+        margin-bottom: 12px;
         .header{
           overflow: hidden;
           position: relative;
@@ -129,7 +97,7 @@ body {
             transform: rotate(0deg);
             img{
               margin: 0 auto;
-              width: 350px;
+              width: 100%;
               height: 200px;
               object-fit: cover;
               display: block;
@@ -188,8 +156,6 @@ body {
           }
         }
         .card-body{
-          padding-bottom: 4px;
-          padding-top: 4px;
           .link{
             float: left;
             display: block;
@@ -227,9 +193,100 @@ body {
     }
 }
 
+#blogs{
+  .card{
+    .card-header{
+      .front,.back{
+        display: block;
+        transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+        transition-duration: .5s;
+        transition-property: transform, opacity, display;
+        position: absolute;
+      }
+      .front {
+        background: rgba(0, 0, 0, 0.62);
+        height: 26px;
+        padding: 5px;
+        color: #fff;
+      }
+    }
+    .card-body{
+      .share{
+        padding-top: 6px;
+        float: right;
+        padding-bottom: 2px;
+        a{
+          display: inline-block;
+          font-size: 18px;
+          border-radius: 5px;
+          color: white;
+          text-align: center;
+          padding: 2px;
+          height: 25px;
+          width: 25px;
+          i{
+            position: relative;
+            bottom: 2px;
+            margin: 0 auto ;
+          }
+        }
+      }
+    }
+
+  }
+}
 
 
+#supportus{
+  h6{
+    font-weight: bolder;
+    color: #717070;
+  }
+  .btn{
+    margin: 0px 5px;
+  }
+}
 
+#footer{
+  min-height: 620px;
+  width: 100%;
+  header{
+
+  }
+  footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    nav{
+      width: max-content;
+      .nav-link {
+        font-size: 21px;
+        margin: 5px 11px;
+      }
+    }
+    .copyright{
+      font-size: 13px;
+      font-family: monospace;
+      padding: 10px;
+    }
+  }
+  ::placeholder {
+    color: #dddddd;
+    opacity: 1; /* Firefox */
+  }
+  select option{
+    color: #ffffff;
+  }
+}
+
+// socials
+.social{
+  &:hover{
+    opacity: 0.7;
+    text-decoration: none;
+  }
+}
 .face{
   background: #4267b2;
 }
@@ -240,6 +297,7 @@ body {
   background: #2aa9e0;
 }
 
+
 // Fonts
 .F-cabin {
     font-family: $en1;
@@ -247,12 +305,13 @@ body {
 .F-Palanquin {
     font-family:$en2 ;
 }
+
 // Other External Css
-#title{
-    padding: 3px;
+.title{
+    padding-bottom: 20px;
     width: 100%;
     text-align: center;
-    #icon-f {
+    .icon-f {
         display: block;
         width: 200px;
         font-size: 25px;
@@ -277,15 +336,16 @@ body {
             background-color: $maincolor;
             display: block;
             position: relative;
-            right: 15;
+            right: 15px;
             float: right;
             top: 10px;
         }
     }
 }
 .colorAfterScroll{
-    background: #333333;
+    background: $dark;
 }
+
 .color {
     background: #eee;
   //  color: seashell;
@@ -297,6 +357,34 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 .section {
     position: relative;
     padding: 3em 10%;
+  .title{
+    margin: 0 auto;
+    text-align: center;
+    span{
+      margin-top:10px ;
+      display: block;
+      text-align: center;
+      font-size: 25px;
+      i{
+        border:1.5px solid  $maincolor;
+        padding: 5px;
+        border-radius: 100%;
+        color: $maincolor;
+      }
+      &::before, &::after{
+        content: "";
+        display: inline-block;
+        width: 80px;
+        height: 5px;
+        top: -5px;
+        position: relative;
+        background: $sccolor;
+      }
+      &::after{
+        right: 0;
+      }
+    }
+  }
 }
 .section h2 {
     text-align: center;
@@ -385,4 +473,25 @@ img {
     line-height: 100px;
     vertical-align: middle;
     text-align: center;
+}
+
+.vcenter{
+  display:table-cell;
+  vertical-align:middle;
+}
+.darker{
+  background: rgba(0, 0, 0, 0.17);
+}
+.darker:focus {
+  background-color: rgba(0, 0, 0, 0.90);
+}
+.vdivide:after {
+  background: #e2e6ea;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  min-height: 70px;
 }

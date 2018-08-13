@@ -15,6 +15,7 @@
                     animateUrl: 'https://cdn.rawgit.com/daneden/animate.css/master/animate.min.css',
                     animateClassIn:'bounceInLeft',
                     animateClassOut:'bounceInRight',
+                    auto:[false,2000],
                     itemsCss: {
                         'property': 'value',
                         'property': 'value'
@@ -30,9 +31,25 @@
                     $('head').append('<link rel="stylesheet" href="'+ settings.animateUrl +'" type="text/css" />');
                 }
                 if (settings.itemsCss != "" || settings.itemsCss != false){
-
                     imgs.css(settings.itemsCss);
                 }
+                // if (settings.auto[0] == true){
+                //     $(this).mouseleave(function(){
+                //         $(this).hover(function(ev){
+                //             clearInterval(timer);
+                //         }, function(ev){
+                //             timer =  setInterval(function () {
+                //                 if (current_img == imgs.length) {
+                //                     current_img = 1;
+                //                 } else {
+                //                     current_img = current_img + 1
+                //                 }
+                //                 show_img();
+                //             },settings.auto[1]);
+                //         });
+                //     });
+                //
+                // }
 
 
 

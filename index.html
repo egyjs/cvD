@@ -93,12 +93,13 @@
 <div class="wrapper" id="head">
     <header class="header">
         <div class="container">
-            <nav class="navbar navbar-expand-md fixed-top navbar-dark  bg-danger">
+            <nav class="navbar navbar-expand-md fixed-top navbar-dark">
+                <a class="navbar-brand" href="#"><span class="colored" >hello</span> brand</a>
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="#"><span class="colored" >hello</span> brand</a>
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -152,6 +153,8 @@
         <!--<div class="arrow-shape-blue"></div>-->
     </section>
 </div>
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 <!--Why Choose Us-->
 <div class="section container-fluid" id="whyus">
@@ -251,6 +254,7 @@
     </div>
 </div>
 
+<!--projects-->
 <div id="projects" class="section">
     <div class="container">
         <h1 class="title">
@@ -384,6 +388,7 @@
     </div>
 </div>
 
+<!--blog-->
 <div id="blogs" class="section color">
     <div class="container">
         <h3 class="title">Our Blog
@@ -481,6 +486,8 @@
         </div>
     </div>
 </div>
+
+<!-- -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 <div id="supportus" class="section">
     <div class="container">
@@ -591,9 +598,10 @@
 <script>
     $(document).ready(function(){
         $("#sliders").elzaSlide({
-            animateClassIn:"rollIn",
-            animateClassOut:"rollOut",
+            animateClassIn:"fadeInLeftBig",
+            animateClassOut:"fadeOutLeftBig",
             time: "slow",
+            auto:[true,3000],
             itemsCss: {},
 
         });
